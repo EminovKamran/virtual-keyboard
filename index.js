@@ -14,8 +14,21 @@ function creatVirtualKeyboard() {
     for (let i = 0; i < symbolRowOne.length; i++) {
         let key = document.createElement('button');
         key.className = 'key';
-        key.textContent = `${symbolRowOne[i]}`
-        keyboard.appendChild(key)
+        key.textContent = `${symbolRowOne[i]}`;
+        keyboard.appendChild(key);
+    }
+    let keyBackspace = document.createElement('button');
+    keyBackspace.className = 'key backspace';
+    keyBackspace.textContent = '⟵';
+    keyboard.appendChild(keyBackspace)
+    let tab = document.createElement('button');
+    tab.className = 'key tab';
+    tab.textContent = '⇥ Tab';
+    keyboard.appendChild(tab);
+    let symbolRowTwo = 'QWERTYUIOP{}'
+    for (let i = 0; i < symbolRowTwo.length; i++) {
+        key.textContent = `${symbolRowTwo[i]}`;
+        keyboard.appendChild(key);
     }
 }
 creatVirtualKeyboard()
