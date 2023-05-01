@@ -143,9 +143,31 @@ key.forEach(element => {
    }) 
 });
 
+for (let i = 0; i < key.length; i++) {
+    key[i].setAttribute('keyname', key[i].innerText);
+    key[i].setAttribute('upperCaseName', key[i].innerText.toUpperCase());
+}
+
+document.body.addEventListener('keydown', (e) => {
+    for (let i = 0; i < key.length; i++) {
+        if (e.code == 'CapsLock' && key[i].getAttribute('upperCaseName').length === 1) {
+            key[i].innerHTML = key[i].getAttribute('upperCaseName')
+        }
+    }
+})
+
+document.body.addEventListener('keyup', (e) => {
+    for (let i = 0; i < key.length; i++) {
+        if (e.code == 'CapsLock' && key[i].getAttribute('upperCaseName').length === 1) {
+            key[i].innerHTML = key[i].getAttribute('upperCaseName').toLowerCase()
+        }
+    }
+})
 
 
-
+document.body.addEventListener('mousedown', (e) => {
+    console.log(e.code == 'CapsLock')
+})
 
 
 
