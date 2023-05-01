@@ -24,6 +24,7 @@ body {
     height: 50%;
     padding: 0;
     border-radius: 5px;
+    font-size: 30px;
 }
 
 .keyboard {
@@ -45,12 +46,16 @@ body {
     margin: 0 4px;
     border: none;
     background-color: rgb(250, 249, 255);
-    color:rgb(115, 115, 114);
+    color: #342f2f;
     box-shadow: -2px -2px 4px rgb(63, 63, 63) , 2px 2px 4px black;
     border-radius: 5px;
     cursor: pointer;
     font-size: 20px;
     margin-bottom: 8px;
+}
+
+.key.active {
+    background-color: aqua;
 }
 
 .backspace {
@@ -69,9 +74,12 @@ body {
     width: 235px;
 }
 
-.shiftleft,
+.shiftleft {
+    width: 114px;
+}
+
 .shiftright {
-    width: 150px;
+    width:  114px;
 }
 
 .box-arrow {
@@ -90,7 +98,7 @@ body {
 .control,
 .option,
 .optionright {
-    width: 80px;
+    width: 81px;
 }
 
 .command,
@@ -100,4 +108,8 @@ body {
 
 .space {
     width: 400px;
+}
+
+.key:hover {
+    background-color: aqua;
 }

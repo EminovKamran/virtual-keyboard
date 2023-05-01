@@ -33,7 +33,7 @@ function creatVirtualKeyboard() {
     tab.className = 'key tab';
     tab.textContent = '⇥ Tab';
     keyboard.appendChild(tab);
-    let symbolRowTwo = 'QWERTYUIOP{}';
+    let symbolRowTwo = 'qwertyuiop[]';
     for (let i = 0; i < symbolRowTwo.length; i++) {
         let key = document.createElement('button');
         key.className = 'key';
@@ -48,7 +48,7 @@ function creatVirtualKeyboard() {
     capslock.className = 'key capslock';
     capslock.textContent = 'Caps Lock ⇪';
     keyboard.appendChild(capslock);
-    let symbolRowThree = 'ASDFGHJKL:"|';
+    let symbolRowThree = "asdfghjkl;'\\";
     for (let i = 0; i < symbolRowThree.length; i++) {
         let key = document.createElement('button');
         key.className = 'key';
@@ -59,7 +59,7 @@ function creatVirtualKeyboard() {
     shiftLeft.className = 'key shiftleft';
     shiftLeft.textContent = 'Shift ⇧';
     keyboard.appendChild(shiftLeft);
-    let symbolRowThour = '~ZXCVBNM<>?';
+    let symbolRowThour = '`zxcvbnm,.?/';
     for (let i = 0; i < symbolRowThour.length; i++) {
         let key = document.createElement('button');
         key.className = 'key';
@@ -115,3 +115,40 @@ function creatVirtualKeyboard() {
     keyboard.appendChild(rightArrow);
 }
 creatVirtualKeyboard()
+
+let key = document.querySelectorAll('.key');
+let display = document.querySelector('.display');
+
+
+document.body.addEventListener('keydown', (index) => {
+    for (let i = 0; i < key.length; i++) {
+        if (key[i].innerHTML === index.key.toLowerCase()) {
+            key[i].classList.add('active')
+        }
+    }
+})
+
+document.body.addEventListener('keyup', (index) => {
+    for(let i = 0; i < key.length; i++) {
+        if (key[i].innerHTML === index.key.toLowerCase()) {
+            key[i].classList.remove('active')
+        }
+    }
+})
+
+key.forEach(element => {
+   element.addEventListener('mousedown', () => {
+    element.className = 'key active';
+    display.innerHTML += element.innerHTML
+   }) 
+});
+
+
+
+
+
+
+
+
+
+
