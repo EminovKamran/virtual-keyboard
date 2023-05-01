@@ -167,7 +167,7 @@ document.body.addEventListener('keyup', (e) => {
 
 document.body.addEventListener('mousedown', (e) => {
     console.log(e.code == 'CapsLock')
-})
+})        
 
 
 
