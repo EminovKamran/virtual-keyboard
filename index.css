@@ -1,0 +1,115 @@
+body {
+    background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+}
+.wrapper {
+    max-width: 1120px;
+    margin: 0 auto;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.title {
+    color: #FFFFFF;
+    font-size: 40px;
+}
+.span {
+    color: #FFFFFF; 
+    font-size: 18px;
+}
+.display {
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.keyboard {
+    width: 100%;
+    height: 55%;
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 14px rgb(238, 236, 233);
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+.key {
+    width: 65px;
+    height: 65px;
+    font-weight: bold;
+    margin: 0 4px;
+    border: none;
+    background-color: rgb(250, 249, 255);
+    color: #342f2f;
+    box-shadow: -2px -2px 4px rgb(63, 63, 63) , 2px 2px 4px black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.key.active {
+    background-color: aqua;
+}
+
+.backspace {
+    width: 160px;
+}
+
+.tab {
+    width: 120px;
+}
+
+.enter {
+    width: 105px;
+}
+
+.capslock {
+    width: 235px;
+}
+
+.shiftleft {
+    width: 114px;
+}
+
+.shiftright {
+    width:  114px;
+}
+
+.box-arrow {
+    display: flex;
+    flex-direction: column;
+}
+
+.up-arrow {
+    height: 28px;
+}
+
+.down-arrow {
+    height: 29px;
+}
+
+.control,
+.option,
+.optionright {
+    width: 81px;
+}
+
+.command,
+.commandright {
+    width: 105px;
+}
+
+.space {
+    width: 400px;
+}
+
+.key:hover {
+    background-color: aqua;
+}
